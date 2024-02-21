@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang = "pl">
+<head>
+    <meta charset = "UTF-8">
+    <meta name = "viewport" content="width=device-width, initial-scale=1.0">
+    <title>Wisielec</title>
+    <script href = "https://code.jquery.com/jquery-3.7.1.min.js"></script>
+    <script>
+        var hasla = ["mydło w płynie", "hamburger bez mięsa"]
+
+        function ustawHaslo(){
+            var haslo = hasla[Math.floor(Math.random() * 2) - 1];
+            var ukryteHaslo = haslo;
+            for(i = 0; i < haslo.lenght; i++){
+                if(haslo[i] == " "){
+                    ukryteHaslo[i] = " ";
+                }
+                else{
+                    ukryteHaslo[i] = "_";
+                }
+            }
+            document.querySelector("#haslo").innerHTML = ukryteHaslo;
+        }
+    </script>
+    <style>
+
+    </style>
+</head>
+<body onload = "ustawHaslo()">
+    <div id = "main">
+        <div id = "haslo">
+
+        </div>
+        <div id = "main2">
+            <div id = "wisielec">
+
+            </div>
+            <div id = "litery">
+
+            </div>
+        </div>
+    </div>
+</body>
+</html>
