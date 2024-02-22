@@ -10,13 +10,14 @@
 
         function ustawHaslo(){
             var haslo = hasla[Math.floor(Math.random() * 2)];
-            var ukryteHaslo = haslo;
-            for(i = 0; i < haslo.lenght; i++){
-                if(ukryteHaslo[i] != " "){
-                    ukryteHaslo[i] = "_";
+            alert(dlugosc);
+            var ukryteHaslo = "";
+            for(i = 0; i < haslo.length; i++){
+                if(haslo[i] != " "){
+                    ukryteHaslo += "_";
                 }
                 else{
-                    ukryteHaslo[i] = " ";
+                    ukryteHaslo += " ";
                 }
             }
             alert(ukryteHaslo);
